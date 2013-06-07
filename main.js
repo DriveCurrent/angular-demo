@@ -21,10 +21,18 @@ app.factory('todos', function(){
 	};	
 });
 
+app.directive('todoDone', function(){
+	return {
+		restrict: "E",
+		scope: {name: '@'},
+		template: "<ul><li><span>{{name}}</<span></li></ul>"
+	}
+});
+
 
 function TodoCtrl($scope, todos) {
     $scope.todos = todos.data;
-	$scope.completes = [];
+	$scope.completed = [];
     $scope.getTotalTodos = function() {
         return $scope.todos.length;
     }
@@ -40,7 +48,7 @@ function TodoCtrl($scope, todos) {
             if (!$scope.todos[i].done) {
                 todoss.push($scope.todos[i]);
             } else {
-				$scope.completes.push($scope.todos[i]);
+				$scope.completed.push($scope.todos[i]);
 			}
         }
         $scope.todos = todoss;
@@ -54,3 +62,4 @@ function SearchToDoCtrl($scope, todos) {
 		$scope.todos = todos.data;		
 	}
 }
+
