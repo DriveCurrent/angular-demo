@@ -1,10 +1,21 @@
 <!doctype html>
 <html>
 <head>
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(function() {
+            var $name = $('#name');
+            var $greeting = $('#greeting');
+
+            $name.on('keyup', function() {
+                $greeting.text($name.val());
+            });
+        });
+    </script>
 </head>
 <body>
-    <h2>Hello Jon!</h2>
+    <input type="text" id="name"/>
+    <h2>Hello <span id="greeting"></span>!</h2>
 </body>
 </html>
 
