@@ -36,7 +36,7 @@
 
         <!-- Completed todos implemented using directive -->
         <h2>Completed todos: (Implemented using Directive)</h2>
-        <todo-done ng-repeat="complete in completed" name="{{complete.text}}"></todo-done>
+        <todo-done ng-repeat="complete in completed" name="{{complete.text|showcompleted}}"></todo-done>
 	</div>
 
 	<hr>

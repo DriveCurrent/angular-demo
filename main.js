@@ -29,7 +29,7 @@ app.directive('todoDone', function(){
 	}
 });
 
-app.filter('completeorder', function(){
+app.filter('showcompleted', function(){
     return function(input) {
         return "I have learned " + input.substring(18, input.length);
 	}
