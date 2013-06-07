@@ -29,6 +29,12 @@ app.directive('todoDone', function(){
 	}
 });
 
+app.filter('completeorder', function(){
+    return function(input) {
+        return "I have learned " + input.substring(18, input.length);
+	}
+});
+
 
 function TodoCtrl($scope, todos) {
     $scope.todos = todos.data;
