@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AngularJS Demo</title>
+    <link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
+    <link href="main.css" rel="stylesheet">
+	<link href="data_sharing.css" rel="stylesheet">
+</head>
+<body>
+	<div ng-app="">
+		<div ng-controller="TodoController">
+			<h2>Add todo controller</h2>
+			<input type="text" ng-model="todo">
+			<h4>I'm trying to add todo : {{todo}}</h2>
+		</div>
+		<hr>
+		<div ng-controller="SearchController">
+			<h2>Search todo controller</h2>
+			<input type="text" ng-model="todo">
+			<h4>I'm trying to search todo : {{todo}}</h4>
+		</div>
+	</div>	
+	<script>
+		
+		function TodoController($scope) {
+			$scope.todo = "my todo";
+		}		
+		function SearchController($scope) {
+			$scope.todo = "my todo";
+		}
+	</script>
+	<hr>
+<h2>Code Source</h2>
+<div style="float: left; white-space: pre; line-height: 1; background: #FFFFFF; "><span class="sc21">&lt;!</span><span class="sc26">DOCTYPE html</span><span class="sc21">&gt;</span><span class="sc0">
+</span><span class="sc1">&lt;html&gt;</span><span class="sc0">
+</span><span class="sc1">&lt;head&gt;</span><span class="sc0">
+    </span><span class="sc1">&lt;title&gt;</span><span class="sc0">AngularJS Demo</span><span class="sc1">&lt;/title&gt;</span><span class="sc0">
+    </span><span class="sc1">&lt;link</span><span class="sc8"> </span><span class="sc3">href</span><span class="sc8">=</span><span class="sc6">"http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css"</span><span class="sc8"> </span><span class="sc3">rel</span><span class="sc8">=</span><span class="sc6">"stylesheet"</span><span class="sc1">&gt;</span><span class="sc0">
+    </span><span class="sc1">&lt;script</span><span class="sc8"> </span><span class="sc3">src</span><span class="sc8">=</span><span class="sc6">"https://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"</span><span class="sc1">&gt;&lt;/script&gt;</span><span class="sc0">
+    </span><span class="sc1">&lt;link</span><span class="sc8"> </span><span class="sc3">href</span><span class="sc8">=</span><span class="sc6">"main.css"</span><span class="sc8"> </span><span class="sc3">rel</span><span class="sc8">=</span><span class="sc6">"stylesheet"</span><span class="sc1">&gt;</span><span class="sc0">
+    </span><span class="sc1">&lt;link</span><span class="sc8"> </span><span class="sc3">href</span><span class="sc8">=</span><span class="sc6">"data_sharing.css"</span><span class="sc8"> </span><span class="sc3">rel</span><span class="sc8">=</span><span class="sc6">"stylesheet"</span><span class="sc1">&gt;</span><span class="sc0">
+</span><span class="sc1">&lt;/head&gt;</span><span class="sc0">
+</span><span class="sc1">&lt;body&gt;</span><span class="sc0">
+    </span><span class="sc1">&lt;div</span><span class="sc8"> </span><span class="sc4">ng-app</span><span class="sc8">=</span><span class="sc6">""</span><span class="sc1">&gt;</span><span class="sc0">
+        </span><span class="sc1">&lt;div</span><span class="sc8"> </span><span class="sc4">ng-controller</span><span class="sc8">=</span><span class="sc6">"TodoController"</span><span class="sc1">&gt;</span><span class="sc0">
+            </span><span class="sc1">&lt;h2&gt;</span><span class="sc0">Add todo controller</span><span class="sc1">&lt;/h2&gt;</span><span class="sc0">
+            </span><span class="sc1">&lt;input</span><span class="sc8"> </span><span class="sc3">type</span><span class="sc8">=</span><span class="sc6">"text"</span><span class="sc8"> </span><span class="sc4">ng-model</span><span class="sc8">=</span><span class="sc6">"todo"</span><span class="sc1">&gt;</span><span class="sc0">
+            </span><span class="sc1">&lt;h4&gt;</span><span class="sc0">I'm trying to add todo : {{todo}}</span><span class="sc1">&lt;/h2&gt;</span><span class="sc0">
+        </span><span class="sc1">&lt;/div&gt;</span><span class="sc0">
+        </span><span class="sc1">&lt;hr&gt;</span><span class="sc0">
+        </span><span class="sc1">&lt;div</span><span class="sc8"> </span><span class="sc4">ng-controller</span><span class="sc8">=</span><span class="sc6">"SearchController"</span><span class="sc1">&gt;</span><span class="sc0">
+            </span><span class="sc1">&lt;h2&gt;</span><span class="sc0">Search todo controller</span><span class="sc1">&lt;/h2&gt;</span><span class="sc0">
+            </span><span class="sc1">&lt;input</span><span class="sc8"> </span><span class="sc3">type</span><span class="sc8">=</span><span class="sc6">"text"</span><span class="sc8"> </span><span class="sc4">ng-model</span><span class="sc8">=</span><span class="sc6">"todo"</span><span class="sc1">&gt;</span><span class="sc0">
+            </span><span class="sc1">&lt;h4&gt;</span><span class="sc0">I'm trying to search todo : {{todo}}</span><span class="sc1">&lt;/h4&gt;</span><span class="sc0">
+        </span><span class="sc1">&lt;/div&gt;</span><span class="sc0">
+    </span><span class="sc1">&lt;/div&gt;</span><span class="sc0">  
+    </span><span class="sc1">&lt;script&gt;</span><span class="sc40">
+</span><span class="sc41">        </span><span class="sc47">function</span><span class="sc41"> </span><span class="sc46">TodoController</span><span class="sc50">(</span><span class="sc41">$</span><span class="sc46">scope</span><span class="sc50">)</span><span class="sc41"> </span><span class="sc50">{</span><span class="sc41">
+            $</span><span class="sc46">scope.todo</span><span class="sc41"> </span><span class="sc50">=</span><span class="sc41"> </span><span class="sc48">"my todo"</span><span class="sc50">;</span><span class="sc41">
+        </span><span class="sc50">}</span><span class="sc41">       
+        </span><span class="sc47">function</span><span class="sc41"> </span><span class="sc46">SearchController</span><span class="sc50">(</span><span class="sc41">$</span><span class="sc46">scope</span><span class="sc50">)</span><span class="sc41"> </span><span class="sc50">{</span><span class="sc41">
+            $</span><span class="sc46">scope.todo</span><span class="sc41"> </span><span class="sc50">=</span><span class="sc41"> </span><span class="sc48">"my todo"</span><span class="sc50">;</span><span class="sc41">
+        </span><span class="sc50">}</span><span class="sc41">
+    </span><span class="sc1">&lt;/script&gt;</span><span class="sc0">
+</span><span class="sc1">&lt;/body&gt;</span></div>
+</body>

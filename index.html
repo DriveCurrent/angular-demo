@@ -12,7 +12,7 @@
 <div ng-app="app">
 	<!-- Data binding and controller -->
 	<div ng-controller="TodoCtrl">
-		<h2>Total todos: {{getTotalTodos()}}</h2>
+		<h2>Total todos: {{getTotalTodos()}}	(ToDo Controller)</h2>
 		<ul class="unstyled">
 			<li ng-repeat="todo in todos | filter:search" ng-style="msStyle" ng-mouseover="msStyle={color:'green'}" ng-mouseleave="msStyle={color:'black'}"">
 				<input type="checkbox" ng-model="todo.done"/>
@@ -43,11 +43,11 @@
 
 	<!-- Data binding and controller -->
 	<div ng-controller="SearchToDoCtrl">
-		<h2>Search non-completed todos:</h2>
+		<h2>Search non-completed todos:	(Search Controller)</h2>
 		<input type="text" ng-model="searchText" ng-model="confirmed" ng-change="searchToDo()" placeholder="type your todo"/>
 		<ul style="list-style-type: none;">
 			<li ng-repeat="todo in todos | filter:searchText">
-				<span>{{todo.text}}</span>
+				<span class="done-{{todo.done}}-search" >{{todo.text}}</span>
 			</li>
 		</ul>
 	</div>
