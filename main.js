@@ -12,9 +12,9 @@ app.factory('todos', function(){
 			{text: 'Learn AngularJS : data filter', done: false},
 			{text: 'Learn AngularJS : data scope', done: false},
 			{text: 'Learn AngularJS : data module', done: false},
-			{text: 'Learn AngularJS : denpendency injector', done: false},
+			{text: 'Learn AngularJS : dependency injector', done: false},
 			{text: 'Learn AngularJS : directives', done: false},
-			{text: 'Learn AngularJS : promisses', done: false},
+			{text: 'Learn AngularJS : promises', done: false},
 			{text: 'Learn AngularJS : services', done: false},
 			{text: 'Learn AngularJS : testing', done: false}
 		]
